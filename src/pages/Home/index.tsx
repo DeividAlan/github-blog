@@ -1,4 +1,12 @@
-import { Avatar, Description, HomeContainer, Info, Profile } from './styles';
+import {
+  Avatar,
+  Description,
+  HomeContainer,
+  Info,
+  Profile,
+  Search,
+  SearchHeader,
+} from './styles';
 
 export function Home() {
   return (
@@ -19,6 +27,11 @@ export function Home() {
           </Info>
         </Description>
       </Profile>
+      <SearchHeader>
+        <strong>Publicações</strong>
+        <span>6 publicações</span>
+      </SearchHeader>
+      <Search type="text" placeholder="Buscar conteúdo" />
     </HomeContainer>
   );
 }

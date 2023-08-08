@@ -73,3 +73,46 @@ export const Info = styled.div`
     font-weight: 400;
   }
 `;
+
+export const SearchHeader = styled.div`
+  width: 100%;
+  margin-top: 4.5rem;
+  display: flex;
+  justify-content: space-between;
+
+  strong {
+    color: ${props => props.theme['base-subtitle']};
+
+    font-family: Nunito;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  span {
+    color: ${props => props.theme['base-span']};
+
+    font-family: Nunito;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+  }
+`;
+
+export const Search = styled.input`
+  width: 100%;
+  margin-top: 0.75rem;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  border: 1px solid ${props => props.theme['base-border']};
+  background: ${props => props.theme['base-input']};
+  /* color: ${props => props.theme['gray-300']}; */
+
+  &::placeholder {
+    color: ${props => props.theme['base-label']};
+    font-family: Nunito;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+  }
+`;
