@@ -2,7 +2,7 @@ import { styled } from 'styled-components';
 
 export const HomeContainer = styled.main`
   width: 100%;
-  max-width: 55.5rem;
+  max-width: 57rem;
   padding: 0 1.5rem;
   margin: 0 auto;
   background-color: transparent;
@@ -115,4 +115,11 @@ export const Search = styled.input`
     font-style: normal;
     font-weight: 400;
   }
+`;
+
+export const PostsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 3rem;
 `;

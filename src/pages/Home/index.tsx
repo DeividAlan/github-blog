@@ -1,8 +1,10 @@
+import { Post } from './components/Post';
 import {
   Avatar,
   Description,
   HomeContainer,
   Info,
+  PostsContainer,
   Profile,
   Search,
   SearchHeader,
@@ -32,6 +34,14 @@ export function Home() {
         <span>6 publicações</span>
       </SearchHeader>
       <Search type="text" placeholder="Buscar conteúdo" />
+      <PostsContainer>
+        <Post />
+        <Post />
+        <Post />
+        <Post />
+        <Post />
+        <Post />
+      </PostsContainer>
     </HomeContainer>
   );
 }
