@@ -23,7 +23,18 @@ export const HeaderContainer = styled.header`
 export const Effect = styled.div`
   width: 100%;
   position: absolute;
-  align-self: center;
   display: flex;
-  justify-content: space-between;
+
+  img {
+    position: absolute;
+    align-self: center;
+  }
+
+  #svg-left {
+    left: 0;
+  }
+
+  #svg-right {
+    right: 0;
+  }
 `;

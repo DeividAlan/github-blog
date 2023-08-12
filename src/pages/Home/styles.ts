@@ -19,13 +19,39 @@ export const Profile = styled.div`
 
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 2rem;
 
   background: ${props => props.theme['base-profile']};
   box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.2);
+
+  a {
+    position: absolute;
+    right: 2rem;
+    top: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    text-decoration: none;
+
+    span {
+      color: ${props => props.theme.blue};
+
+      font-family: Nunito;
+      font-size: 0.75rem;
+      font-style: normal;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      border-bottom: 1px solid ${props => props.theme.blue};
+    }
+  }
 `;
 
 export const Avatar = styled.img`
@@ -64,8 +90,12 @@ export const Info = styled.div`
   display: flex;
   margin-top: 1.5rem;
   gap: 1.5rem;
+  flex-wrap: wrap;
 
   span {
+    display: flex;
+    gap: 0.5rem;
+
     color: ${props => props.theme['base-subtitle']};
     font-family: Nunito;
     font-size: 1rem;
@@ -106,7 +136,10 @@ export const Search = styled.input`
   padding: 0.75rem 1rem;
   border: 1px solid ${props => props.theme['base-border']};
   background: ${props => props.theme['base-input']};
-  /* color: ${props => props.theme['gray-300']}; */
+
+  &:focus {
+    border: 1px solid ${props => props.theme.blue};
+  }
 
   &::placeholder {
     color: ${props => props.theme['base-label']};
@@ -115,6 +148,12 @@ export const Search = styled.input`
     font-style: normal;
     font-weight: 400;
   }
+
+  color: ${props => props.theme['base-text']};
+  font-family: Nunito;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
 `;
 
 export const PostsContainer = styled.div`

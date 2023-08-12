@@ -12,7 +12,13 @@ This project, an application was developed that integrates with the GitHub API t
 ```bash
 # Dependency installation
 $ npm install
+
+# .env
+Create a .env based on .env.example and fill it with desired github information.
 ```
+## Warning
+
+The GitHub API has a limit of 10 requests per minute if you don't set up a private key. You can have up to 30 requests per minute for free by configuring a private key, you can see it in the documentation: https://docs.github.com/pt/rest/search#rate-limit
 
 ## Running the app
 

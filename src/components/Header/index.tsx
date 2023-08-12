@@ -9,8 +9,8 @@ export function Header() {
       <img src={logo} alt="" />
       <span>GITHUB BLOG</span>
       <Effect>
-        <img src={effectLeft} alt="" />
-        <img src={effectRight} alt="" />
+        <img id="svg-left" src={effectLeft} alt="" />
+        <img id="svg-right" src={effectRight} alt="" />
       </Effect>
     </HeaderContainer>
   );

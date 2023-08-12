@@ -1,3 +1,4 @@
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import { styled } from 'styled-components';
 
 export const PostContainer = styled.main`
@@ -43,6 +44,7 @@ export const ButtonsContainer = styled.nav`
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    border-bottom: 1px solid ${props => props.theme['base-profile']};
 
     text-decoration: none;
 
@@ -54,6 +56,10 @@ export const ButtonsContainer = styled.nav`
       font-style: normal;
       font-weight: 700;
       text-transform: uppercase;
+    }
+
+    &:hover {
+      border-bottom: 1px solid ${props => props.theme.blue};
     }
   }
 `;
@@ -73,5 +79,33 @@ export const Info = styled.div`
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
+  }
+`;
+
+export const PostBody = styled(ReactMarkdown)`
+  display: flex;
+  width: 100%;
+  max-width: 54rem;
+  padding: 2.5rem 2rem;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  color: ${props => props.theme['base-text']};
+  font-family: Nunito;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+
+  img {
+    width: 100%;
+  }
+
+  a {
+    color: ${props => props.theme.blue};
+    font-family: Nunito;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
   }
 `;

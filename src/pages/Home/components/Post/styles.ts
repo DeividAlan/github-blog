@@ -1,13 +1,28 @@
+import { Link } from 'react-router-dom';
 import { styled } from 'styled-components';
 
-export const PostContainer = styled.div`
+export const PosButton = styled(Link)`
   max-width: 26rem;
   width: 100%;
   height: 16.25rem;
   margin-bottom: 2rem;
-  padding: 2rem;
+  text-decoration: none;
+  border: 2px solid ${props => props.theme['base-post']};
 
   border-radius: 10px;
+  overflow: hidden;
+
+  &:hover {
+    border: 2px solid ${props => props.theme['base-label']};
+  }
+`;
+
+export const PostContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  background: transparent;
+
+  padding: 2rem;
   background: ${props => props.theme['base-post']};
 
   & > div {
@@ -23,6 +38,7 @@ export const PostContainer = styled.div`
       font-size: 1.25rem;
       font-style: normal;
       font-weight: 700;
+      text-align: left;
     }
 
     span {
@@ -33,6 +49,8 @@ export const PostContainer = styled.div`
       font-size: 0.875rem;
       font-style: normal;
       font-weight: 400;
+      text-align: right;
+      text-transform: capitalize;
     }
   }
 
@@ -52,5 +70,6 @@ export const PostContainer = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: 180%;
+    text-align: left;
   }
 `;
